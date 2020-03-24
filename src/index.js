@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import {BrowserRouter as Router} from 'react-router-dom'
+import 'antd/dist/antd.css';
 
 import TopBar from 'components/TopBar'
 import Footer from 'components/Footer'
