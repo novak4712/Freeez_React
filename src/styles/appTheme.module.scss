@@ -1,0 +1,78 @@
+@import '../../node_modules/@csstools/normalize.css';
+@import './color.scss';
+@import '../fonts/fonts.scss';
+
+
+
+::placeholder {
+  color: #666;
+}
+
+::selection {
+  color: #fff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 13px;
+  min-width: 320px;
+  position: relative;
+  line-height: 1.65;
+  font-family: "AvenirNextCyr-Medium", sans-serif;
+  overflow-x: hidden;
+
+  input, textarea {
+    border: #666 1px solid;
+    outline: none;
+
+    &:focus:required:invalid {
+      border-color: red;
+    }
+
+    &:required:valid {
+      border-color: green;
+    }
+  }
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+
+  li {
+    list-style: none;
+    padding: 0;
+  }
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+a{
+  text-decoration: none;
+}
+
+.appThemeLight {
+  color: $main-dark;
+  background: $main-light;
+  height: 100vh;
+  position: relative;
+}
+
+.appThemeDark {
+  background: $main-dark;
+  color: $main-light;
+  height: 100vh;
+  position: relative;
+}
