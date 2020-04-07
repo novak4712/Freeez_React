@@ -9,7 +9,8 @@
 }
 
 ::selection {
-  color: #fff;
+  color: $main-light;
+  background: $main-accent;
 }
 
 html {
@@ -63,16 +64,11 @@ a{
   text-decoration: none;
 }
 
-.appThemeLight {
+.appTheme{
   color: $main-dark;
   background: $main-light;
-  height: 100vh;
   position: relative;
-}
-
-.appThemeDark {
-  background: $main-dark;
-  color: $main-light;
+  width: 100vw;
   height: 100vh;
-  position: relative;
+  overflow: hidden;
 }
