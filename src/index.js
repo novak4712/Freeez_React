@@ -7,22 +7,25 @@ import TopBar from 'components/TopBar'
 import Footer from 'components/Footer'
 import Routes from 'routes'
 //import Preloader from 'components/Preloader'
+import Cursor from 'components/Cursor'
 import {CurrentThemeProvider} from 'contexts/currentTheme'
 
 import styles from './styles/appTheme.module.scss'
 import './styles/style.css'
 
 const App = () => {
+
     return (
         <CurrentThemeProvider>
-                <div className={`${styles.appTheme} ${styles.unselectable}`}>
-                    {/*<Preloader />*/}
-                    <Router>
-                        <TopBar/>
-                        <Routes/>
-                        <Footer/>
-                    </Router>
-                </div>
+            <div className={`${styles.appTheme} ${styles.unselectable}`}>
+                {/*<Preloader />*/}
+                <Router>
+                    <TopBar/>
+                    <Routes/>
+                    <Footer/>
+                </Router>
+               <Cursor />
+            </div>
         </CurrentThemeProvider>
     )
 };
