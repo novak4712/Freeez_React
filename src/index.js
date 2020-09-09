@@ -9,6 +9,7 @@ import Routes from 'routes'
 //import Preloader from 'components/Preloader'
 import Cursor from 'components/Cursor'
 import {CurrentThemeProvider} from 'contexts/currentTheme'
+import {CurrentShoppingBagProvider} from 'contexts/currentShoppingBag'
 
 import styles from './styles/appTheme.module.scss'
 import './styles/style.css'
@@ -17,15 +18,17 @@ const App = () => {
 
     return (
         <CurrentThemeProvider>
-            <div className={`${styles.appTheme} ${styles.unselectable}`}>
-                {/*<Preloader />*/}
-                <Router>
-                    <TopBar/>
-                    <Routes/>
-                    <Footer/>
-                </Router>
-               <Cursor />
-            </div>
+            <CurrentShoppingBagProvider>
+                <div className={`${styles.appTheme} ${styles.unselectable}`}>
+                    {/*<Preloader />*/}
+                    <Router>
+                        <TopBar/>
+                        <Routes/>
+                        <Footer/>
+                    </Router>
+                    <Cursor/>
+                </div>
+            </CurrentShoppingBagProvider>
         </CurrentThemeProvider>
     )
 };
